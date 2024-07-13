@@ -7,7 +7,10 @@ let attempts = 0;
 let guess = 0;
 let isFound = false;
 
-while (!isFound) {
+document.getElementById('mybutton').addEventListener('click', function() {
+    this.style.display = 'none';
+    
+    while (!isFound) {
     guess = window.prompt(`Guess a number between ${min} and ${max}`);
     guess = Number(guess);
     
@@ -31,3 +34,4 @@ while (!isFound) {
         }
     }
 }
+});
